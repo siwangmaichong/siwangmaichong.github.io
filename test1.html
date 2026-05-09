@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>并排卡片示例</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center; /* 让 container 在屏幕居中 */
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /* 容器指令 */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background: white;
+            width: 280px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="profile-img" style="margin: 0 auto;"></div>
+            <h2>项目 A</h2>
+            <p>这是关于 A 的介绍。</p>
+        </div>
+
+        <div class="card">
+            <div class="profile-img" style="margin: 0 auto;"></div>
+            <h2>项目 B</h2>
+            <p>这是关于 B 的介绍。</p>
+        </div>
+        
+        <!-- 你甚至可以再加第三个卡片，它也会自动排好 -->
+        <div class="card">
+            <div class="profile-img" style="margin: 0 auto;"></div>
+            <h2>项目 C</h2>
+            <p>这是关于 C 的介绍。</p>
+        </div>
+    </div>
+
+</body>
+</html>
