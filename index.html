@@ -1,7 +1,79 @@
 <!DOCTYPE html>
-<html>
-<head><title>我的个人主页</title></head>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    
+    <!-- 这里是 CSS 装修部分 -->
+    <style>
+        /* 1. 设置整个页面的背景和字体 */
+        body {
+            font-family: "Microsoft YaHei", sans-serif; /* 使用微软雅黑字体 */
+            background-color: #f4f4f9; /* 背景颜色：淡灰色 */
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;    /* 垂直居中 */
+            height: 100vh;          /* 让页面高度撑满整个屏幕 */
+            margin: 0;
+        }
+
+        /* 2. 设置“个人卡片”的样式 */
+        .card {
+            background-color: white; /* 卡片背景为白色 */
+            padding: 40px;           /* 内部留白 */
+            border-radius: 20px;     /* 圆角边缘 */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* 添加一点阴影，看起来像浮起来的 */
+            text-align: center;      /* 文字居中 */
+            max-width: 350px;        /* 限制卡片最大宽度 */
+        }
+
+        /* 3. 设置头像样式 */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;      /* 50%的圆角会让正方形变圆 */
+            object-fit: cover;       /* 图片如果比例不对，会自动裁剪而不是拉伸 */
+            border: 5px solid #e0e0e0;
+        }
+
+        /* 4. 名字和职业的文字颜色 */
+        h1 { color: #333; margin: 10px 0; }
+        p { color: #777; line-height: 1.6; }
+
+        /* 5. 按钮样式 */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #007bff; /* 按钮蓝色 */
+            color: white;              /* 文字白色 */
+            text-decoration: none;     /* 去掉链接下划线 */
+            border-radius: 25px;       /* 胶囊形状按钮 */
+            transition: 0.3s;          /* 增加鼠标悬停时的平滑效果 */
+        }
+
+        /* 鼠标指上去时按钮变色 */
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body>
-    <h1>你好，世界！这是我的第一个网页。1111</h1>
+
+    <!-- 这里是 HTML 结构部分 -->
+    <div class="card">
+        <!-- 你的头像：你可以先把这张示例图换成自己的 -->
+        <img src="https://via.placeholder.com/150" alt="头像" class="profile-img">
+        
+        <h1>你的名字</h1>
+        <p>这是我的第一个 GitHub Pages 个人主页。我正在学习网页制作，欢迎来到我的数字花园。</p>
+        
+        <!-- 社交链接 -->
+        <div class="links">
+            <a href="https://github.com/你的用户名" class="btn">关注我的 GitHub</a>
+        </div>
+    </div>
+
 </body>
 </html>
